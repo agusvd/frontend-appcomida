@@ -13,7 +13,7 @@ const TopicMiniCard = ({ topic }) => {
 
 
     return (
-        <div className='dark:bg-[#202020] rounded-md p-2 hover:mt-2 hover:mb-2 duration-300 ease-in-out transition-all hover:bg-[#EEEEEE] dark:hover:bg-[#272829] max-w-[800px]'>
+        <div className='dark:bg-[#202020] bg-gray-100 rounded-md p-2 hover:mt-2 hover:mb-2 duration-300 ease-in-out transition-all hover:bg-[#EEEEEE] dark:hover:bg-[#272829] max-w-[800px]'>
             {/* primera caja para ordenar */}
             <Link to='/forum/topic/card' className='flex gap-2 p-2'>
                 <div className='flex flex-col'>

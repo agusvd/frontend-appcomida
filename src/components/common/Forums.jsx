@@ -125,13 +125,13 @@ const Forums = () => {
                     <input placeholder='Buscar...' className='w-full text-xl dark:text-white bg-[#EEEEEE] dark:bg-[#272829] outline-none' />
                     {/* boton para crear un forum */}
                     <button className={`p-2 rounded-md flex items-center justify-center gap-2 
-                    ${showNewTopic ? 'bg-red-500 ' : 'bg-gray-100 dark:bg-green-500'} `}
+                    ${showNewTopic ? 'bg-red-500 ' : 'bg-gray-200 active:bg-green-500 duration-300 ease-in-out'} `}
                         onClick={handleNewTopicClick}>
                         {showNewTopic ?
                             <RiCloseFill size={25} className='text-white' />
                             :
                             <>
-                                <span className='dark:text-white bg'>Nuevo tema</span>
+                                <span className='dark:text-white font-semibold'>Nuevo</span>
                             </>
                         }
                     </button>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { BiHome, BiHeart, BiSearch, BiUser, BiLogOut, BiCategoryAlt, BiMenuAltLeft, BiMessageAltDetail } from 'react-icons/bi';
+import { BiHome, BiHeart, BiSearch, BiUser, BiLogOut, BiLogIn, BiMenuAltLeft, BiMessageAltDetail } from 'react-icons/bi';
 import Search from './Search';
 import Notifications from './Notifications';
 
@@ -78,6 +78,14 @@ const Sidebar = () => {
                             </Link>
                         </li>
                         <li className='w-full'>
+                            <Link to='/login' className="flex items-center gap-2 cursor-pointer hover:bg-[#EEEEEE] dark:hover:bg-[#272829] p-2 rounded-md duration-100 transition-all ease-in-out text-sm">
+                                <BiLogIn size={30} />
+                                <div className={`${searchVisible ? 'sm:hidden' : ''} ${notificationsVisible ? 'sm:hidden' : ''} hidden sm:block`}>
+                                    Iniciar sesión
+                                </div>
+                            </Link>
+                        </li>
+                        <li className='w-full'>
                             <div className="flex items-center gap-2 cursor-pointer hover:bg-[#EEEEEE] dark:hover:bg-[#272829] p-2 rounded-md duration-100 transition-all ease-in-out text-sm">
                                 <BiLogOut size={30} />
                                 <div className={`${searchVisible ? 'sm:hidden' : ''} ${notificationsVisible ? 'sm:hidden' : ''} hidden sm:block`}>
@@ -85,6 +93,7 @@ const Sidebar = () => {
                                 </div>
                             </div>
                         </li>
+                        
                     </ul>
                 </div>
                 {searchVisible && (

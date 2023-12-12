@@ -68,15 +68,15 @@ const CreateRecipe = () => {
                 <form className='w-full h-full flex items-start'>
                     <div className='p-2 w-full gap-2'>
                         <div className='col-span-2'>
-                            <label className='text-xl text-white font-semibold'>Titulo</label>
+                            <label className='text-xl text-black dark:text-white font-semibold'>Titulo</label>
                             <input placeholder='Titulo...' className='rounded-md w-full bg-gray-200 text-black dark:text-white dark:bg-[#202020] p-2' />
                         </div>
                         <div className=''>
-                            <label className='text-xl text-white font-semibold'>Tiempo</label>
+                            <label className='text-xl text-black dark:text-white font-semibold'>Tiempo</label>
                             <input placeholder='Tiempo...' className='rounded-md w-full bg-gray-200 text-black dark:text-white dark:bg-[#202020] p-2' />
                         </div>
                         <div className=''>
-                            <label className='text-xl text-white font-semibold'>Dificultad</label>
+                            <label className='text-xl text-black dark:text-white font-semibold'>Dificultad</label>
                             <select className='rounded-md w-full bg-gray-200 text-black dark:text-white dark:bg-[#202020] p-2'>
                                 <option>
                                     Facil
@@ -90,7 +90,7 @@ const CreateRecipe = () => {
                             </select>
                         </div>
                         <div className=''>
-                            <label className='text-xl text-white font-semibold'>Ingredientes</label>
+                            <label className='text-xl text-black dark:text-white font-semibold'>Ingredientes</label>
                             <div className='flex gap-2'>
                                 <div className='flex justify-center items-center'>
                                     <button type='button' onClick={addIngrediente} className='duration-300 transition-all ease-in-out p-2 rounded-md flex items-center gap-2 dark:text-white text-black dark:bg-[#202020] bg-gray-200 mb-2'>
@@ -100,10 +100,10 @@ const CreateRecipe = () => {
                                 <div className='flex gap-2 max-h-[50vh] overflow-auto'>
                                     {ingredientes.map((ingrediente, index) => (
                                         <div key={index} className='flex'>
-                                            <div className='flex bg-[#202020] p-2 rounded-md items-end'>
+                                            <div className='flex bg-gray-200  dark:bg-[#202020] p-2 rounded-md items-end'>
                                                 <div className='gap-2 flex p-2'>
                                                     <div className='flex flex-col gap-2'>
-                                                        <label className='text-xl text-white font-semibold'>
+                                                        <label className='text-xl text-black dark:text-white font-semibold'>
                                                             Ingrediente
                                                         </label>
                                                         <input
@@ -115,7 +115,7 @@ const CreateRecipe = () => {
                                                             className='bg-gray-100 rounded-md p-1 hover:bg-gray-200 duration-300 transition-all ease-in-out' />
                                                     </div>
                                                     <div className='flex flex-col gap-2'>
-                                                        <label className='text-xl text-white font-semibold'>
+                                                        <label className='text-xl text-black dark:text-white font-semibold'>
                                                             Cantidad
                                                         </label>
                                                         <input
@@ -130,7 +130,7 @@ const CreateRecipe = () => {
                                                 </div>
                                                 <div className='flex justify-center items-center'>
                                                     <button type='button' onClick={() => removeIngrediente(index)} className=''>
-                                                        <BiTrash size={30} className='hover:text-red-500 duration-100 transition-all ease-in-out text-white' />
+                                                        <BiTrash size={30} className='hover:text-red-500 duration-100 transition-all ease-in-out text-black dark:text-white' />
                                                     </button>
                                                 </div>
                                             </div>
@@ -141,7 +141,7 @@ const CreateRecipe = () => {
 
 
                         </div>
-                        <div>
+                        <div className='pt-2'>
                             {/* Subir foto o video */}
                             <div
                                 onDrop={handleDrop}
